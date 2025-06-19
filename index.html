@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ML QnA App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Ask a Question About Machine Learning</h1>
+    <input type="text" id="question" placeholder="Enter your question here..." />
+    <button onclick="askQuestion()">Ask</button>
+    <div id="answer-container">
+      <strong>Answer:</strong> <span id="answer">[waiting for question]</span>
+    </div>
+  </div>
+  <div id="context-view" style="margin-top: 30px; background: #eee; padding: 15px; border-radius: 8px;">
+  <strong>Context:</strong>
+  <p id="context-text"></p>
+</div>
+
+<!-- TensorFlow and QnA model loader -->
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/qna"></script>
+<script src="script.js"></script>
+</body>
+</html>
